@@ -6,8 +6,8 @@ import _knex from 'knex';
 import handleRegister from './controllers/register.js';
 import handleProfile from './controllers/profile.js';
 import handleSignin from './controllers/signin.js';
-import {handleImage }from './controllers/imageHandler.js';
-import {handleApiCall }from './controllers/imageHandler.js';
+import { handleImage } from './controllers/imageHandler.js';
+import { handleApiCall } from './controllers/imageHandler.js';
 const db = _knex({
   client: 'pg',
   connection: {
@@ -44,4 +44,6 @@ app.post('/imageurl', (req, res) => {
   handleApiCall(req, res);
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000, ()=> {
+  console.log(`App is running on port ${process.env.PORT || 3000 }`)
+});
