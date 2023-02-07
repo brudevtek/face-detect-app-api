@@ -10,13 +10,7 @@ import { handleImage } from './controllers/imageHandler.js';
 import { handleApiCall } from './controllers/imageHandler.js';
 const db = _knex({
   client: 'pg',
-  connection: {
-    host: 'dpg-cfgp7d9a6gdvgkkeuqa0-a',
-    port: 5432,
-    user: 'webmaster',
-    password: '',
-    database: 'smart_brain_db_uyw8',
-  },
+  connection: process.env.DATABASE_URL,
 });
 
 const app = express();
