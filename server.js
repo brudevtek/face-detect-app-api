@@ -11,11 +11,11 @@ import { handleApiCall } from './controllers/imageHandler.js';
 const db = _knex({
   client: 'pg',
   connection: {
-    host: 'postgres://webmaster:VPqtTYKoGtaotb8KXAGA3GFxE12Xpc0W@dpg-cfgp7d9a6gdvgkkeuqa0-a/smart_brain_db_uyw8',
+    host: 'dpg-cfgp7d9a6gdvgkkeuqa0-a',
     port: 5432,
-    user: '',
+    user: 'webmaster',
     password: '',
-    database: 'smart-brain-database',
+    database: 'smart_brain_db_uyw8',
   },
 });
 
