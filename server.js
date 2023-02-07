@@ -11,11 +11,11 @@ import { handleApiCall } from './controllers/imageHandler.js';
 const db = _knex({
   client: 'pg',
   connection: {
-    host: '127.0.0.1',
+    host: 'postgres://webmaster:VPqtTYKoGtaotb8KXAGA3GFxE12Xpc0W@dpg-cfgp7d9a6gdvgkkeuqa0-a/smart_brain_db_uyw8',
     port: 5432,
-    user: 'postgres',
+    user: '',
     password: '',
-    database: 'smartbrain',
+    database: 'smart-brain-database',
   },
 });
 
@@ -44,6 +44,6 @@ app.post('/imageurl', (req, res) => {
   handleApiCall(req, res);
 });
 
-app.listen(process.env.PORT || 3000, ()=> {
-  console.log(`App is running on port ${process.env.PORT || 3000 }`)
+app.listen(process.env.PORT || 3000, () => {
+  console.log(`App is running on port ${process.env.PORT || 3000}`);
 });
